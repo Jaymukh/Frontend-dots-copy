@@ -24,6 +24,7 @@ import { errorState, spinnerState } from "../../states";
 // Utilities
 import { useUserService } from '../../services';
 import { useMapHelpers } from '../../helpers';
+import { ClearObjectStore, Stores } from './db';
 
 
 interface IFormValues {
@@ -64,6 +65,7 @@ export default function Login() {
     const { errors, isSubmitting, isValid } = formState;
 
     const onSubmit = (values: IFormValues) => {
+        ClearObjectStore(Stores.Users)
         // ReactGA.exception({
         //     description: 'An error ocurred',
         //     fatal: true
