@@ -1,0 +1,61 @@
+@import url("../../../styles/color.css");
+
+input {
+    border-radius: 0.703125vh;
+    border: 0.140625vh solid var(--black-3);
+    padding: 0rem 6.07500vh;
+    position: relative;
+    font-size: 1.96875vh;
+    width: 59.90625vh;
+    height: 6.75vh;
+}
+
+.icon {
+    position: absolute;
+    padding: 0rem 2.25vh;
+    /* transform: translate(56%, 20%); */
+}
+
+.suggestions_hidden {
+    height: 0;
+    visibility: hidden;
+}
+
+.suggestions_visible {
+    width: 59.90625vh;
+    /* min-height: 6rem;
+    max-height: 10rem; */
+    overflow-y: scroll;
+    font-size: 1.96875vh;
+    box-shadow: 0 0.28125vh 0.5625vh 0 rgba(0, 0, 0, .13), 0 0.140625vh 0.140625vh 0 rgba(0, 0, 0, .11);
+}
+
+.suggestions_item:hover {
+    background-color: var(--purple-0);
+    color: var(--white-0);
+}
+
+.suggestion_height {
+    min-height: 13.5vh;
+    max-height: 22.5vh;
+}
+
+.suggestion_menu {
+	position: relative;
+}
+
+.suggestion_menu_dropdown {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #fff;
+	z-index: 1000 !important;
+	border-radius: 0.703125vh;
+	min-width: 42.1875vh;
+	padding: 0;
+	box-shadow: 0 0.28125vh 0.5625vh rgba(0, 0, 0, 0.1);
+	border: 0.140625vh solid #ccc;
+}
+
+
+

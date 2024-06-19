@@ -1,0 +1,18 @@
+@import url("../../../utils/fonts/fonts.css");
+
+.table_medium {
+    height: 19.9375rem;
+}
+
+.table_large {
+    height: 34.0625rem;
+}
+
+.table_xl {
+    min-height: 19.9375rem;    
+    max-height: 37rem
+}
+
+table {
+    font-family: "Poppins-Medium", sans-serif;
+}

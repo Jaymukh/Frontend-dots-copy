@@ -1,0 +1,9 @@
+@import url("../../../styles/color.css");
+
+.input {
+    border-radius: 0.703125vh;
+    border: 0.140625vh solid var(--black-2);
+    height: 6.75vh;
+    padding: 1.98vh;
+    font-size: 1.96875vh;
+}

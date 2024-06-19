@@ -1,0 +1,38 @@
+
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    entrypoint: "bash"
+    args: ["-c", "docker login --username $$DOCKER_USER --password $$DOCKER_PASS"]
+    secretEnv: ["DOCKER_USER", "DOCKER_PASS"]
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - 'build'
+      - '-t'
+      - "emdata/dots-mlp:$SHORT_SHA"
+      - '.'
+  - name: "gcr.io/cloud-builders/docker"
+    entrypoint: "docker"
+    args: ["push", "emdata/dots-mlp:$SHORT_SHA"]
+  - name: "gcr.io/cloud-builders/gcloud"
+    entrypoint: "bash"
+    args: ["-c", "mkdir -p ~/.ssh && gcloud secrets versions access latest --secret=frontend_cb_ssh_key > ~/.ssh/frontend_cb_ssh_key && chmod 600 ~/.ssh/frontend_cb_ssh_key; gcloud secrets versions access latest --secret=frontend_cb_ssh_key_pub >> ~/.ssh/authorized_keys"]
+  - name: "gcr.io/cloud-builders/gcloud"
+    entrypoint: "gcloud"
+    args:
+      - compute
+      - ssh
+      - --zone
+      - us-east1-b
+      - $_SSH_USER@$_SERVICE_NAME
+      - --
+      - cd /home/$_SSH_USER/deploy; sudo docker compose down -v; echo $$DOCKER_PASS | docker login -u$$DOCKER_USER --password-stdin ; sudo IMAGE_TAG=$SHORT_SHA docker compose up -d; sudo systemctl restart caddy;
+    
+availableSecrets:
+  secretManager:
+  - versionName: projects/$PROJECT_ID/secrets/DOCKER_USER/versions/latest
+    env: "DOCKER_USER"
+  - versionName: projects/$PROJECT_ID/secrets/DOCKER_PASS/versions/latest
+    env: "DOCKER_PASS"
+
+options:
+  logging: CLOUD_LOGGING_ONLY

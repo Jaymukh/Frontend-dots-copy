@@ -1,0 +1,11 @@
+@import url("../../../styles/color.css");
+
+.legend {
+    border-radius: 0.5625vh;
+    height: 1.125vh;
+}
+
+.legend_font_style {
+    font-size: 1.40625vh;
+    color: var(--black-0);
+}

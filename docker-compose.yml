@@ -1,0 +1,33 @@
+version: '3.8'  
+
+services:
+  dots-frontend:
+    image: emdata/dots-mlp:${IMAGE_TAG} # Replace with your image name and version
+    env_file:
+      - ./local.env
+    command: ["npm", "run", "start"]
+    networks:
+      - frontend
+    volumes:
+      - static-data:/static/
+    restart: always  # Ensures the service restarts if it stops
+
+  nginx:
+    image: nginx  # Replace with a specific version
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - static-data:/usr/share/nginx/html/static/
+    depends_on:
+      - dots-frontend
+    networks:
+      - frontend
+    restart: always  # Ensures the service restarts if it stops
+
+networks:
+  frontend:
+    driver: bridge
+
+volumes:
+  static-data:

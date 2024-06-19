@@ -1,0 +1,53 @@
+@import url("../../../styles/color.css");
+@import url("../../../utils/fonts/fonts.css");
+
+.select {
+    -moz-appearance: none; /* Firefox */    
+    -webkit-appearance: none; /* Safari and Chrome */    
+    appearance: none;
+    padding: 0rem 11.25vh;
+    font-family: "Poppins-Medium", sans-serif;
+}
+
+.select:disabled {
+    opacity: 0.5;
+}
+
+.select_small {
+    height: 4.78125vh;
+    font-size: 1.96875vh;
+    border-radius: 0.703125vh;
+    border: 0.140625vh solid var(--black-2);
+}
+
+.select_medium {
+    /* For state and district select */
+    min-height: 2.25vh;
+    border: none;
+    font-size: 1.96875vh;
+}
+
+.select_medium::after {
+    /* For state and district select */
+    min-height: 2.25vh;
+    border: none;
+    font-size: 1.96875vh;
+}
+
+.select_large {
+    border-radius: 0.703125vh;
+    height: 6.75vh;
+    padding: 0rem 1.6875vh;
+    font-size: 1.96875vh;
+    border: 0.140625vh solid var(--black-2);
+}
+
+.select_text_selcted {
+    color: var(--black-0);
+    background: url("../../../utils/images/select-arrow-icon.svg") no-repeat right;
+}
+
+.select_text_not_selected {
+    color: var(--black-3);
+    background: url("../../../utils/images/not-select-arrow-icon.svg") no-repeat right;
+}

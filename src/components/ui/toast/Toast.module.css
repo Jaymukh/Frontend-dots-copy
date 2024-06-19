@@ -1,0 +1,33 @@
+@import url("../../../styles/color.css");
+
+.alert_box {
+    bottom: 0;
+    position: absolute;
+    width: 70.3125vh;
+    height: 13.359375vh;
+    border-radius: 0.703125vh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2.8125vh;
+    box-shadow: 0px 4px 4px 0px var(--black-25);
+    z-index: 2000;
+}
+
+.error_toast {
+    border: 1px solid var(--rejected-0);
+    background: var(--rejected-1);
+}
+
+.success_toast {
+    border: 1px solid var(--purple-0);
+    background: var(--purple-1);
+}
+
+.alert_title {
+    font-size: 2.8125vh;
+}
+
+.alert_-description {
+    font-size: 1.96875vh;
+    color: var(--light-grey-0);
+}

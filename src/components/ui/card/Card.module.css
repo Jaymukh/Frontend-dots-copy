@@ -1,0 +1,48 @@
+@import url("../../../styles/color.css");
+/* @import url("assets/fonts/fonts.css"); */
+
+
+/* contained,
+    transparent,
+    bordered */
+
+.card_bordered{ /* with border and background color */
+	background-color: var(--white-1);
+	border: 0.140625vh solid var(--black-1);
+	border-radius: 0.703125vh;
+	color: var(--black-0);
+}
+.card_contained { /* without border and with background color */
+	background-color: var(--white-1);
+	border: none;
+	border-radius: 0.703125vh;
+	color: var(--black-0);
+	padding: 2.8125vh;
+}
+
+.card_transparent { /* without border and without background color */
+	background-color: transparent;
+	border: none;
+	border-radius: 0.703125vh;
+	color: var(--black-0);
+	padding: 2.25vh;
+}
+
+/* CardSize */
+
+.card_default {
+	width: 100%;
+}
+.card_small {
+	width: 20.875rem;
+}
+
+.card_medium {
+	width: 90%;
+}
+
+/* .card_large {
+	width: 40.5rem;
+} */
+
+

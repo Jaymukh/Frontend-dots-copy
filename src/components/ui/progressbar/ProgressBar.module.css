@@ -1,0 +1,13 @@
+@import url("../../../styles/color.css");
+
+.progress_container {
+    padding: 0;
+    height: 0.703125vh;
+    background-color: var(--purple-1);
+    width: 100%;
+}
+
+.progressbar {
+    background-color: var(--purple-0);
+    border-radius: inherit;
+}

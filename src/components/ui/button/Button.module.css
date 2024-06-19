@@ -1,0 +1,515 @@
+@import url("../../../styles/color.css");
+@import url("../../../utils/fonts/fonts.css");
+
+.btn_primary {
+	/* (bordered) purple button with purple background and with purple border */
+	background-color: var(--purple-0);
+	border: 0.140625vh solid var(--purple-0);
+	border-radius: 0.703125vh;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_primary:hover {
+    /* (bordered) hover */
+    background-color: var(--white-1);
+    border: 0.140625vh solid var(--purple-0);
+    border-radius: 0.703125vh;
+    color: var(--purple-0);
+    height: 5vh;
+    font-weight: 500;
+    font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_primary:disabled, .btn_primary:disabled:hover {
+	/* (bordered) purple button with purple background and with purple border */
+	background-color: var(--purple-0);
+	border-color: var(--purple-0);
+	border-radius: 0.703125vh;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+	opacity: 0.5;
+}
+
+.btn_primary_contained {
+	/* purple button with purple background and without border */
+	border: none;
+	background-color: var(--purple-0);
+	border-radius: 0.703125vh;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_primary_contained:hover {
+	background-color: var(--white-1);
+	border: none;
+	border-radius: 0.703125vh;
+	color: var(--purple-0);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_primary_contained:disabled, .btn_primary_contained:disabled:hover {
+	/* purple button with purple background and without border */
+	background-color: var(--purple-0);
+	border-radius: 0.703125vh;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+	opacity: 0.5;
+}
+
+.btn_primary_transparent {
+	/* purple button without backgrount and without border */
+	background-color: transparent;
+	border: none;
+	color: var(--purple-0);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_primary_transparent:hover {
+	background-color: transparent;
+	border: 0;
+	color: var(--purple-5);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_primary_transparent:disabled, .btn_primary_transparent:disabled:hover {
+	/* purple button without backgrount and without border */
+	background-color: transparent;
+	border: none;
+	color: var(--purple-0);
+	height: 5vh !important;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+	opacity: 0.5;
+}
+
+.btn_secondary {
+	/* (bordered) white button with white backgrount and with white border */
+	background-color: var(--white-1);
+	border: 0.140625vh solid var(--purple-0);
+	border-radius: 0.703125vh;
+	color: var(--purple-0);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_secondary:hover {
+	background-color: var(--purple-0);
+	border: 0.140625vh solid var(--white-1);
+	border-radius: 0.703125vh;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_secondary:disabled, .btn_secondary:disabled:hover {
+	/* (bordered) white button with white backgrount and with white border */
+	background-color: var(--white-1);
+	border-color: var(--white-1);
+	border-radius: 0.703125vh;
+	color: var(--purple-0);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+	opacity: 0.5;
+}
+
+.btn_secondary_contained {
+	/* white button with white backgrount and without border */
+	background-color: var(--white-1);
+	border: none;
+	border-radius: 0.703125vh;
+	color: var(--purple-0);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_secondary_contained:hover {
+	background-color: var(--purple-0);
+	border-radius: 0.703125vh;
+	border: none;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_secondary_contained:disabled, .btn_secondary_contained:disabled:hover {
+	/* white button with white backgrount and without border */
+	background-color: var(--white-1);
+	border-radius: 0.703125vh;
+	color: var(--purple-0);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+	opacity: 0.5;
+}
+
+.btn_secondary_transparent {
+	/* white button without backgrount and without border */
+	background-color: transparent;
+	border: none !important;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_secondary_transparent:hover {
+	background-color: transparent;
+	border: none !important;
+	color: var(--purple-0);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_secondary_transparent:disabled, .btn_secondary_transparent:disabled:hover {
+	/* white button without backgrount and without border */
+	background-color: transparent;
+	border: none !important;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+	opacity: 0.5;
+}
+
+.btn_dark {
+	/* (bordered) black button with black background and with black border */
+	background-color: var(--black-0);
+	border: 0.140625vh solid var(--black-0);
+	border-radius: 0.703125vh;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_dark:hover {
+    /* (bordered) hover */
+    background-color: var(--white-1);
+    border: 0.140625vh solid var(--black-0);
+    border-radius: 0.703125vh;
+    color: var(--black-0);
+    height: 5vh;
+    font-weight: 500;
+    font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_dark:disabled, .btn_dark:disabled:hover {
+	/* (bordered) black button with black background and with black border */
+	background-color: var(--black-0);
+	border-color: var(--black-0);
+	border-radius: 0.703125vh;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+	opacity: 0.5;
+}
+
+.btn_dark_contained {
+	/* black button with black background and without border */
+	border: none;
+	background-color: var(--black-0);
+	border-radius: 0.703125vh;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_dark_contained:hover {
+	background-color: var(--white-1);
+	border: none;
+	border-radius: 0.703125vh;
+	color: var(--black-0);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_dark_contained:disabled, .btn_dark_contained:disabled:hover {
+	/* black button with black background and without border */
+	background-color: var(--black-0);
+	border-radius: 0.703125vh;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+	opacity: 0.5;
+}
+
+.btn_dark_transparent {
+	/* black button without backgrount and without border */
+	background-color: transparent;
+	border: none;
+	color: var(--black-0);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_dark_transparent:hover {
+	background-color: transparent;
+	border: 0;
+	color: var(--black-5);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_dark_transparent:disabled, .btn_dark_transparent:disabled:hover {
+	/* black button without backgrount and without border */
+	background-color: transparent;
+	border: none;
+	color: var(--black-0);
+	height: 5vh !important;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+	opacity: 0.5;
+}
+
+.btn_muted {
+	/* (bordered) lightgray button with lightgray border and lightgray background color */
+	background-color: var(--black-5);
+	border: 0.140625vh solid var(--black-5);
+	border-radius: 0.703125vh;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_muted:hover {
+	background-color: var(--white-1);
+	border: 0.140625vh solid var(--black-5);
+	border-radius: 0.703125vh;
+	color: var(--black-5);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_muted_contained {
+	/* lightgray button without border and with lightgray background color */
+	background-color: var(--black-5);
+	border: none;
+	border-radius: 0.703125vh;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_muted_contained:hover {
+	background-color: var(--white-1);
+	border: none;
+	border-radius: 0.703125vh;
+	color: var(--black-5);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_muted_transparent {
+	/* lightgray button without border and without background color */
+	background-color: transparent;
+	border: none;
+	color: var(--black-5);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_muted_transparent:hover {
+	background-color: transparent;
+	border: none;
+	color: var(--black-3);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_warning {
+	background-color: var(--rejected-0);
+	border: 0.140625vh solid var(--rejected-0);
+	border-radius: 0.5625vh;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_warning:hover {
+	background-color: var(--white-1);
+	border: 0.140625vh solid var(--rejected-0);
+	border-radius: 0.5625vh;
+	color: var(--rejected-0);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_warning:disabled, .btn_warning:disabled:hover {
+	background-color: var(--rejected-0);
+	border-color: var(--rejected-0);
+	border-radius: 0.5625vh;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+	opacity: 0.5;
+}
+
+.btn_warning_contained {
+	background-color: var(--rejected-0);
+	border-radius: 0.5625vh;
+	border: none;
+	border: none;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_warning_contained:hover {
+	background-color: var(--white-1);
+	border-radius: 0.5625vh;
+	border: none;
+	color: var(--rejected-0);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_warning_contained:disabled, .btn_warning_contained:disabled:hover {
+	background-color: var(--rejected-0);
+	border-radius: 0.5625vh;
+	border: none;
+	color: var(--white-1);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+	opacity: 0.5;
+}
+
+.btn_warning_transparent {
+	background-color: transparent;
+	border: none !important;
+	color: var(--rejected-0);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_warning_transparent:hover {
+	background-color: transparent;
+	border: none !important;
+	color: var(--rejected-0);
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_warning_transparent:disabled, .btn_warning_transparent:disabled:hover {
+	background-color: transparent;
+	border: none !important;
+	color: var(--rejected-0);
+	height: 5vh;
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+	opacity: 0.5;
+}
+
+.btn_success_transparent {
+	background-color: transparent;
+	border: none !important;
+	color: var(--green-0);
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_success_transparent:hover {
+	background-color: transparent;
+	border: none !important;
+	color: var(--green-6);
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+.btn_success_transparent:disabled, .btn_success_transparent:disabled:hover {
+	background-color: transparent;
+	border: none !important;
+	color: var(--green-0);
+	font-weight: 500;
+	font-family: "Poppins-Medium", sans-serif;
+}
+
+/* ButtonSize */
+
+.btn_xsmall {
+	/* font-size: 0.625rem !important;  */
+	font-size: 1.40625vh !important; /* 10px */	
+	width: fit-content;
+	padding: 0 1rem;
+}
+
+.btn_small {
+	/* font-size: 0.75rem !important;	 */
+	font-size: 1.6875vh !important;/* 12px */
+	width: fit-content;
+	padding: 0 1rem;
+}
+
+.btn_default {
+	/* font-size: 0.813rem;	 */
+	font-size: 1.82925vh !important; /* 13px */
+	width: fit-content;
+	padding: 0 1rem;
+}
+
+.btn_medium { 
+	/* font-size: 0.875rem !important;	 */
+	font-size: 1.96875vh !important;/* 10.5625vh */
+	width: 198px;
+}
+
+.btn_large {
+	/* font-size: 1rem !important;	 */
+	font-size: 2.25vh !important; /* 16px */
+	width: 100%;
+}
+
+.no_radius {
+	border-radius: 0;
+}
+
+.btn_avatar {
+	/* width: 2.1875rem !important; */
+	width: 4.921875vh !important;
+	/* height: 2.1875rem !important; */
+	height: 4.921875vh !important;
+	color: var(--white-1);
+}
+
+.btn_avatar:hover {
+	color: var(--white-1);
+}

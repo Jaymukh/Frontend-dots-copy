@@ -1,0 +1,103 @@
+/* include all the color variable */
+
+html {
+    /* --app-background: rgba(244, 246, 248, 1); */
+    --app-background: rgba(245, 246, 248, 1);
+    --light-app-background: rgba(208, 226, 225, 1);
+
+    --purple-0: rgba(43, 13, 92, 1);
+    --purple-1: rgba(43, 13, 92, 0.1);
+    --purple-2: rgba(43, 13, 92, 0.2);
+    --purple-3: rgba(43, 13, 92, 0.3);
+    --purple-4: rgba(43, 13, 92, 0.4);
+    --purple-5: rgba(43, 13, 92, 0.5);
+    --purple-6: rgba(43, 13, 92, 0.6);
+    --purple-7: rgba(43, 13, 92, 0.7);
+    --purple-8: rgba(43, 13, 92, 0.8);
+    --purple-9: rgba(43, 13, 92, 0.9);
+
+    --purple-10: rgba(234, 231, 239, 1);
+    --purple-11: rgba(191, 182, 205, 1);
+    
+    /* --purple-10: rgba(17, 24, 39, 1); */
+    
+    --black-0: rgba(0, 0, 0, 1);
+    --black-1: rgba(0, 0, 0, 0.1); 
+    --black-16: rgba(0, 0, 0, 0.16);
+    --black-2: rgba(0, 0, 0, 0.2); 
+    --black-25: rgba(0, 0, 0, 0.25);
+    --black-3: rgba(0, 0, 0, 0.3); 
+    --black-4: rgba(0, 0, 0, 0.4); 
+    --black-5: rgba(0, 0, 0, 0.5); 
+    --black-6: rgba(0, 0, 0, 0.6);
+    --black-7: rgba(0, 0, 0, 0.7); 
+    --black-8: rgba(0, 0, 0, 0.8); /* settings li border */
+    --black-9: rgba(0, 0, 0, 0.9); 
+    --black-10: #0D0B0B;
+    /*select large border */
+    --black-11: #1118261A;
+    /* select small border */
+    
+    --black-12: rgba(17, 24, 39, 0.50);
+    /* login muted */
+    --black-13: #D9D9D9;
+    --black-14: rgba(32, 32, 32, 1);
+    
+    --black-15: rgba(17, 24, 39, 0.10); 
+
+
+    --white-1: #FFFFFF;
+    --white-0: rgba(255, 255, 255, 1);
+
+    --warning-0: #D55038;
+    --rejected-0: rgba(180, 51, 28, 1);
+    --rejected-1: rgba(180, 51, 28, 0.10);
+
+    --orange-1: rgba(244, 122, 31, 0.1);
+
+    --bs-btn-disabled-bg: rgba(17, 24, 39, 0.50);
+
+    --green-0: rgba(16, 128, 65, 1);
+    --green-1: rgba(16, 128, 65, 0.1);
+    --green-2: rgba(16, 128, 65, 0.2);
+    --green-3: rgba(16, 128, 65, 0.3);
+    --green-4: rgba(16, 128, 65, 0.4);
+    --green-5: rgba(16, 128, 65, 0.5);
+    --green-6: rgba(16, 128, 65, 0.6);
+    --green-7: rgba(16, 128, 65, 0.7);
+    --green-8: rgba(16, 128, 65, 0.8);
+    --green-9: rgba(16, 128, 65, 0.9);
+
+    --blue-0: rgba(17, 24, 39, 1);
+    --blue-1: rgba(17, 24, 39, 0.1);
+    --blue-2: rgba(17, 24, 39, 0.2);
+    --blue-3: rgba(17, 24, 39, 0.3);
+    --blue-4: rgba(17, 24, 39, 0.4);
+    --blue-5: rgba(17, 24, 39, 0.5);
+    --blue-6: rgba(17, 24, 39, 0.6);
+    --blue-7: rgba(17, 24, 39, 0.7);
+    --blue-8: rgba(17, 24, 39, 0.8);
+    --blue-9: rgba(17, 24, 39, 0.9);
+
+    --moonstone-blue-0: rgba(128, 169, 196, 1);
+
+    --grey-0: rgba(73, 73, 73, 1);
+    --light-grey-0: rgba(86, 86, 86, 1);
+    --light-grey-1: rgb(240, 240, 240);
+    --light-grey-2: rgb(204, 204, 204);
+    --light-grey-3: rgb(221, 223, 227);
+    --light-grey-4: rgb(221, 221, 221);
+    --light-grey-5: rgb(233, 230, 238);
+
+    --scrollbar-track: rgba(217, 217, 217, 1);
+    --scrollbar-thumb:rgba(17, 24, 39, 1);
+
+    --bs-offcanvas-padding-x: 1rem;
+    --bs-offcanvas-padding-y: 1rem;
+
+    --icon-color: rgba(28, 27, 31, 1);
+    --icon-color-5: rgba(28, 27, 31, 0.5);
+    --table-border: rgba(197, 197, 197, 1);
+
+    --moonstone-blue: rgba(128, 169, 196, 1);
+}
