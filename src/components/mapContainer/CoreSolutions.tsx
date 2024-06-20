@@ -48,10 +48,13 @@ const CoreSolutions: React.FC<CoreSolutionsProps> = ({
 
     const handleRequestLayersDrawer = (contactUsDrawerOpen: boolean) => {
         setRequestLayersDrawerOpen(contactUsDrawerOpen);
+        console.log("This is solution1")
     };
     const handleAnchorClick = (anchor: string) => {
         // For scroll to the anchor/id
         document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth' });
+        console.log("This is solution2")
+
     };
 
     return (
