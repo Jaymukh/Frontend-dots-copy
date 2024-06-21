@@ -35,10 +35,12 @@ const MapPopup: React.FC<MapPopupProps> = ({ properties, handleFocused, index })
 
     const handleImageLoad = () => {
         setLoaded(true);
+        // console.log("This is popup close2.")
     }
 
     const handlePopupClick = (geoIdArray: any[], geoHierarchyLevel: number) => {
         let geo_id = geoHierarchyLevel === 1 ? geoIdArray[1] : geoIdArray[0];
+        console.log("This is popup close1.")
         navigate({
             pathname: RouteConstants.stories,
             search: `?geo_code=${geo_id}&page_no=1&storiespp=${Constants.storiesSelectOptions[0].value}`,

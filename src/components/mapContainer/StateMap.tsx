@@ -22,7 +22,8 @@ import * as Constants from "../../utils/constants/Constants";
 import { useMapsService, useUserService } from "../../services";
 import HoverPopup from "./HoverPopup";
 import { useMapHelpers } from "../../helpers";
-import { initDB } from "../login/db";
+// import { initDB } from "../login/db";
+import { initDB } from "../../indexDBdatabase/db";
 import Switch from "../ui/switch/Switch";
 
 interface Option {
@@ -146,6 +147,7 @@ const StateMap: React.FC<StateMapProps> = ({
     // if(Heading.title === )
     // console.log("This is toggle");
     const name: string = event?.target?.name!;
+    // console.log("THis is name", name)
     const now = new Date();
     const formattedDateTime = `${now.getFullYear()}-${String(
       now.getMonth() + 1
@@ -155,6 +157,9 @@ const StateMap: React.FC<StateMapProps> = ({
       now.getSeconds()
     ).padStart(2, "0")}`;
     setIsChecked({ ...isChecked, [name]: !isChecked[name] });
+    // console.log("THis is name", name)
+    // console.log("THis is ischecked", isChecked)
+
     const obj3 = { id: formattedDateTime, SwitctName: name, Value: !isChecked[name] };
     initDB("users", obj3);
   };

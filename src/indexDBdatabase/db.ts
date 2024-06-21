@@ -167,4 +167,32 @@ export const ClearObjectStore = (storeName:string) => {
   };
 };
 
+export const RetrieveAllData = (storeName:string) => {
+    const request = indexedDB.open('myDB', 1);
+  
+    request.onerror = (event) => {
+      console.error('Database error:', request.error);
+    };
+  
+    request.onsuccess = (event) => {
+      const db = request.result;
+    //   console.log(request);
+      const transaction = db.transaction(storeName, 'readonly');
+      const objectStore = transaction.objectStore(storeName);
+  
+      const getAllRequest = objectStore.getAll();
+  
+      getAllRequest.onsuccess = () => {
+        console.log(`All data from '${storeName}' retrieved successfully:`, getAllRequest.result);
+      };
+  
+      getAllRequest.onerror = (event) => {
+        console.error(`Error retrieving data from '${storeName}':`, getAllRequest.error);
+      };
+    };
+  };
+  
+
+
+
 // Example functional component using the clearIndexedDBStore function
