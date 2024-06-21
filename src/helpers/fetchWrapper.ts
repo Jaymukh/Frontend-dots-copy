@@ -11,6 +11,7 @@ import { APIS, RouteConstants } from "../constants";
 // import { initDB } from "../components/login/db";
 import { initDB } from "../indexDBdatabase/db";
 import { error } from "console";
+import {  postIndexedDB } from "../indexDBdatabase/postDB";
 
 function useFetchWrapper() {
   const [auth, setAuth] = useRecoilState(authState);
@@ -139,9 +140,13 @@ function useFetchWrapper() {
       };
       const response = await axios.post(
         getURL(APIS.USERS.GET_NEW_ACCESS_TOKEN),
+      
         { refresh },
         { headers }
       );
+      if (response.data) {
+        postIndexedDB()
+    }
       return handleResponse(response);
     }
   }

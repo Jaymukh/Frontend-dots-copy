@@ -1,3 +1,5 @@
+import { resolve } from "path";
+
 let request: IDBOpenDBRequest;
 let db: IDBDatabase;
 let version = 1;
@@ -168,29 +170,51 @@ export const ClearObjectStore = (storeName:string) => {
 };
 
 export const RetrieveAllData = (storeName:string) => {
-    const request = indexedDB.open('myDB', 1);
+    return new Promise((resolve, reject) => {
+        const request = indexedDB.open('myDB', 1);
+        request.onerror = (event) => {
+          console.error('Database error:', request.error);
+        };
+        request.onsuccess = (event) => {
+         const db = request.result;
+        //   console.log(request);
+          const transaction = db.transaction(storeName, 'readonly');
+          const objectStore = transaction.objectStore(storeName);
+      
+          const getAllRequest = objectStore.getAll();
+          getAllRequest.onsuccess = () => {
+    resolve(getAllRequest.result)
+            // console.log(`All data from '${storeName}' retrieved successfully:`, getAllRequest.result);
+          };
+      
+          getAllRequest.onerror = (event) => {
+            // console.error(`Error retrieving data from '${storeName}':`, 
+        reject(getAllRequest.error);
+          };
+        }
+    })
+}
+
+
   
-    request.onerror = (event) => {
-      console.error('Database error:', request.error);
-    };
+
+    // request.onsuccess = async () => {
+    //     try {
+    //       // console.log(initDB)
+    //       const db = request.result;
+    //       const tx = db.transaction(storeName, "readwrite");
+    //       const store = tx.objectStore(storeName);
+    //       store.add(data);
   
-    request.onsuccess = (event) => {
-      const db = request.result;
-    //   console.log(request);
-      const transaction = db.transaction(storeName, 'readonly');
-      const objectStore = transaction.objectStore(storeName);
+    //       tx.oncomplete = () => resolve(true);
+    //     } catch (error) {
+    //       // console.log(initDB)
   
-      const getAllRequest = objectStore.getAll();
+    //       // reject(error);
+    //     }
+    //   };
   
-      getAllRequest.onsuccess = () => {
-        console.log(`All data from '${storeName}' retrieved successfully:`, getAllRequest.result);
-      };
-  
-      getAllRequest.onerror = (event) => {
-        console.error(`Error retrieving data from '${storeName}':`, getAllRequest.error);
-      };
-    };
-  };
+    
   
 
 

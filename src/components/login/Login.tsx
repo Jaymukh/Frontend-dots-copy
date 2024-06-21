@@ -20,6 +20,7 @@ import { Button, ButtonTheme, ButtonSize, ButtonVariant } from '../ui/button/But
 import { Heading, TypographyColor, TypographyType } from '../ui/typography/Heading';
 import Body, { BodyType, BodyColor } from '../ui/typography/Body';
 import { errorState, spinnerState } from "../../states";
+import { postIndexedDB } from '../../indexDBdatabase/postDB';
 
 // Utilities
 import { useUserService } from '../../services';
@@ -65,9 +66,17 @@ export default function Login() {
     const { errors, isSubmitting, isValid } = formState;
 
     const onSubmit = (values: IFormValues) => {
+      
+        // RetrieveAllData('users')
+        // .then((response) => {
+        //     console.log(response)
+        //     return response;
+        // })
+        // .catch((error) => {
+        //   console.error('Error in retrieving data:', error);
+        // });
        
-       
-        RetrieveAllData(Stores.Users);
+        // RetrieveAllData(Stores.Users);
         // ClearObjectStore(Stores.Users)
         // ReactGA.exception({
         //     description: 'An error ocurred',

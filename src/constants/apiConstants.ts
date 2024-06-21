@@ -40,7 +40,8 @@ const APIS: any = {
         GET_GEO_SPECIFIC_DATA: '/cif/headingtable',
         GET_CORE_SOLUTIONS_DATA: '/cif/bubblegraph',
         SEND_EMAIL: '/cif/request-email',
-    }
+    },
+    INDEXEDDB : " "
 }
 
 export { APIS };
