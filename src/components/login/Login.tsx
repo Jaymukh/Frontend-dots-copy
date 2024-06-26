@@ -20,12 +20,14 @@ import { Button, ButtonTheme, ButtonSize, ButtonVariant } from '../ui/button/But
 import { Heading, TypographyColor, TypographyType } from '../ui/typography/Heading';
 import Body, { BodyType, BodyColor } from '../ui/typography/Body';
 import { errorState, spinnerState } from "../../states";
-import { postIndexedDB } from '../../indexDBdatabase/postDB';
+// import { PostIndexedDB } from '../../indexDBdatabase/PostIndexedDB';
+
 
 // Utilities
 import { useUserService } from '../../services';
 import { useMapHelpers } from '../../helpers';
 import { ClearObjectStore, Stores, RetrieveAllData } from '../../indexDBdatabase/db';
+import { PostIndexedDB } from '../../indexDBdatabase/PostIndexedDB';
 
 
 interface IFormValues {
@@ -66,7 +68,7 @@ export default function Login() {
     const { errors, isSubmitting, isValid } = formState;
 
     const onSubmit = (values: IFormValues) => {
-      
+        // PostIndexedDB()
         // RetrieveAllData('users')
         // .then((response) => {
         //     console.log(response)

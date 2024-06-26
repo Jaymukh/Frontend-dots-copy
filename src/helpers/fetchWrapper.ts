@@ -11,7 +11,9 @@ import { APIS, RouteConstants } from "../constants";
 // import { initDB } from "../components/login/db";
 import { initDB } from "../indexDBdatabase/db";
 import { error } from "console";
-import {  postIndexedDB } from "../indexDBdatabase/postDB";
+import { PostIndexedDB } from "../indexDBdatabase/PostIndexedDB";
+import { useId } from "react";
+import { useIndexedDBservice } from "../services";
 
 function useFetchWrapper() {
   const [auth, setAuth] = useRecoilState(authState);
@@ -76,11 +78,20 @@ function useFetchWrapper() {
 
   return {
     get: (url: string, params?: any) =>
-      axiosInstance.get(getURL(url), { params }).then(handleResponse).catch(handleError),
+      axiosInstance
+        .get(getURL(url), { params })
+        .then(handleResponse)
+        .catch(handleError),
     post: (url: string, data?: any) =>
-      axiosInstance.post(getURL(url), data).then(handleResponse).catch(handleError),
+      axiosInstance
+        .post(getURL(url), data)
+        .then(handleResponse)
+        .catch(handleError),
     put: (url: string, data?: any) =>
-      axiosInstance.put(getURL(url), data).then(handleResponse).catch(handleError),
+      axiosInstance
+        .put(getURL(url), data)
+        .then(handleResponse)
+        .catch(handleError),
     delete: (url: string) =>
       axiosInstance.delete(getURL(url)).then(handleResponse).catch(handleError),
   };
@@ -103,21 +114,27 @@ function useFetchWrapper() {
     // console.log("This is error response",error);
     if (error.response) {
       storeResponseInDB(error.response);
-    //   console.log("THis is error respomse",error);
+      //   console.log("THis is error respomse",error);
     }
     return Promise.reject(error);
   }
 
   function storeResponseInDB(response: AxiosResponse) {
     const now = new Date();
-    const formattedDateTime = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")} ${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")}`;
+    const formattedDateTime = `${now.getFullYear()}-${String(
+      now.getMonth() + 1
+    ).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")} ${String(
+      now.getHours()
+    ).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}:${String(
+      now.getSeconds()
+    ).padStart(2, "0")}`;
     const responseObject = {
       id: formattedDateTime,
       URL: response.config.url,
       Method: response.config.method,
       Status: response.status,
       Email: loggedUser.email_id,
-      Response: response?.data || response?.data?.current_password?.detail, 
+      Response: response?.data || response?.data?.current_password?.detail,
       statusText: response?.statusText || response?.data?.message,
     };
     // console.log("Storing response in IndexedDB", response);
@@ -125,7 +142,8 @@ function useFetchWrapper() {
   }
 
   async function getRefreshToken() {
-    const refresh = auth?.tokens?.refresh;
+  // async function useRefreshToken() {
+  const refresh = auth?.tokens?.refresh;
     const access = auth?.tokens?.access;
     const isExpired = checkTokenExpiry(refresh);
     if (isExpired) {
@@ -140,13 +158,13 @@ function useFetchWrapper() {
       };
       const response = await axios.post(
         getURL(APIS.USERS.GET_NEW_ACCESS_TOKEN),
-      
+
         { refresh },
         { headers }
       );
       if (response.data) {
-        postIndexedDB()
-    }
+        PostIndexedDB()
+      }
       return handleResponse(response);
     }
   }
@@ -160,6 +178,3 @@ function useFetchWrapper() {
 }
 
 export { useFetchWrapper };
-
-
-

@@ -41,7 +41,9 @@ const APIS: any = {
         GET_CORE_SOLUTIONS_DATA: '/cif/bubblegraph',
         SEND_EMAIL: '/cif/request-email',
     },
-    INDEXEDDB : " "
+    ANALYTICS: {
+         INDEXEDDB : "/analytics/usermetrics/"
+    }
 }
 
 export { APIS };

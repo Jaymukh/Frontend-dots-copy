@@ -53,7 +53,7 @@ const CoreSolutions: React.FC<CoreSolutionsProps> = ({
     const handleAnchorClick = (anchor: string) => {
         // For scroll to the anchor/id
         document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth' });
-        console.log("This is solution2")
+        // console.log("This is solution2")
 
     };
 
